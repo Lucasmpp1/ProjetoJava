@@ -1,33 +1,47 @@
-🎮 Sistema de Personagens de Jogo em Java
-Este projeto consiste em um sistema simples de personagens de jogo desenvolvido em Java, com foco na aplicação dos conceitos de Programação Orientada a Objetos (POO).
+# 🎮 Sistema de Personagens em Java
 
-O sistema simula interações entre personagens como Guerreiro, Mago e Arqueiro, permitindo ações como ataque, defesa e uso de habilidades especiais.
+Projeto simples em Java para praticar Programação Orientada a Objetos (POO).
 
-🚀 Funcionalidades
-Criação de diferentes personagens
-Ataque entre personagens
-Sistema de dano baseado em atributos
-Uso de habilidades especiais
-Exibição de status (vida, ataque e defesa)
-Interação com o usuário via terminal
-🧠 Conceitos de POO Aplicados
-Interface → definição de ações comuns (Acoes)
-Classe Abstrata → base para os personagens (Personagem)
-Herança → reutilização de código nas classes concretas
-Polimorfismo → diferentes comportamentos para os mesmos métodos
-Encapsulamento → proteção dos atributos
-Interação entre objetos → personagens atacando uns aos outros
-🧱 Estrutura do Projeto
+A ideia foi criar personagens de jogo (Guerreiro, Mago e Arqueiro) com comportamentos diferentes, mas que compartilham ações em comum como atacar, defender e usar habilidades.
+
+---
+
+## 🚀 O que o sistema faz
+
+- Cria diferentes tipos de personagens  
+- Permite que um personagem ataque outro  
+- Calcula dano com base em ataque e defesa  
+- Mostra o status (vida, ataque e defesa)  
+- Permite interação com o usuário pelo terminal  
+
+---
+
+## 🧠 O que foi usado
+
+- Interface  
+- Classe abstrata  
+- Herança  
+- Polimorfismo  
+- Encapsulamento  
+
+---
+
+## 📁 Estrutura
 projetoJava/ │ ├── Acoes.java ├── Personagem.java ├── Guerreiro.java ├── Mago.java ├── Arqueiro.java └── Main.java
 
-🎮 Como Funciona
+---
 
-Ao executar o programa:
+## ▶️ Como rodar
 
-O usuário escolhe um personagem Escolhe um alvo O sistema realiza o ataque O status de todos os personagens é exibido
-💻 Tecnologias Utilizadas Java Programação Orientada a Objetos (POO) 🎯 Objetivo
+1. Clonar o repositório  
+2. Abrir em alguma IDE (Eclipse, IntelliJ, VS Code)  
+3. Executar o arquivo `Main.java`  
 
-Este projeto foi desenvolvido com o objetivo de praticar e demonstrar conceitos fundamentais de Programação Orientada a Objetos em Java de forma simples e aplicada.
+---
+
+## 🎯 Objetivo
+
+Praticar os conceitos de POO na prática e entender como as classes se relacionam em um sistema simples.
 
 👨‍💻 Autores
 
