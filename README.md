@@ -9,7 +9,8 @@ A ideia foi criar personagens de jogo (Guerreiro, Mago e Arqueiro) com comportam
 ## 🚀 O que o sistema faz
 
 - Cria diferentes tipos de personagens  
-- Permite que um personagem ataque outro  
+- Permite que um personagem ataque outro
+- Permite que o personagem use sua habilidade especial
 - Calcula dano com base em ataque e defesa  
 - Mostra o status (vida, ataque e defesa)  
 - Permite interação com o usuário pelo terminal  
@@ -27,7 +28,7 @@ A ideia foi criar personagens de jogo (Guerreiro, Mago e Arqueiro) com comportam
 ---
 
 ## 📁 Estrutura
-projetoJava/ │ ├── Acoes.java ├── Personagem.java ├── Guerreiro.java ├── Mago.java ├── Arqueiro.java └── Main.java
+projetoJava/ │ ├── Acoes.java ├── Personagem.java ├── Guerreiro.java ├── Mago.java ├── Arqueiro.java ├── MenuSistema.java └── Main.java
 
 ---
 
