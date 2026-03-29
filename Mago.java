@@ -10,24 +10,26 @@ public class Mago extends Personagem {
     }
 
     @Override
-    public void atacar() {
-        System.out.println("O mago " + nome + " lançou magia causando " + ataque + " de dano!");
+    public void atacar(Personagem alvo) {
+        System.out.println("O Mago " + nome + " lançou magia causando " + ataque + " de dano!");
+        alvo.receberDano(ataque);
     }
 
     @Override
     public void defender() {
-        System.out.println("O mago " + nome + " se defendeu!");
+        defendendo = true;
+        System.out.println("O Mago " + nome + " está se defendendo!");
     }
 
     @Override
-    public void usarHabilidadesEspeciais() {
-        int danoEspecial = ataque + mana;
-
+    public void usarHabilidadesEspeciais(Personagem alvo) {
         if (mana >= 20) {
-            System.out.println("O mago " + nome + " usou magia poderosa causando " + danoEspecial + " de dano!");
+            int danoEspecial = ataque + mana;
+            System.out.println("O Mago " + nome + " usou magia poderosa causando " + danoEspecial + " de dano!");
+            alvo.receberDano(danoEspecial);
             mana -= 20;
         } else {
-            System.out.println("Mana insuficiente!");
+            System.out.println(nome + " não tem mana suficiente!");
         }
     }
 }

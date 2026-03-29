@@ -10,21 +10,24 @@ public class Arqueiro extends Personagem {
     }
 
     @Override
-    public void atacar() {
-        System.out.println("O arqueiro " + nome + " atirou causando " + ataque + " de dano!");
+    public void atacar(Personagem alvo) {
+        int dano = ataque + (precisao / 2);
+        System.out.println("O Arqueiro " + nome + " atirou em " + alvo.nome + " causando " + dano + " de dano!");
+        alvo.receberDano(dano);
     }
 
     @Override
     public void defender() {
-        System.out.println("O arqueiro " + nome + " se esquivou!");
+        defendendo = true;
+        System.out.println("O Arqueiro " + nome + " está se defendendo!");
     }
 
     @Override
-    public void usarHabilidadesEspeciais() {
-        int danoEspecial = ataque + (precisao / 2);
-        System.out.println("O arqueiro " + nome + " usou tiro preciso causando " + danoEspecial + " de dano!");
+    public void usarHabilidadesEspeciais(Personagem alvo) {
+        int danoEspecial = ataque + precisao;
+        System.out.println("O Arqueiro " + nome + " usou tiro preciso causando " + danoEspecial + " de dano!");
+        alvo.receberDano(danoEspecial);
     }
-    
     
     
 }

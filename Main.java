@@ -21,15 +21,15 @@ public class Main {
         Personagem jogador;
 
         switch (escolha) {
-            case 1:
-                jogador = guerreiro;
-                break;
-            case 2:
-                jogador = arqueiro;
-                break;
-            case 3:
-                jogador = mago;
-                break;
+            case 1: 
+            	jogador = guerreiro; 
+            	break;
+            case 2: 
+            	jogador = arqueiro; 
+            	break;
+            case 3: 
+            	jogador = mago; 
+            	break;
             default:
                 System.out.println("Opção inválida!");
                 sc.close();
@@ -46,15 +46,15 @@ public class Main {
         Personagem alvo;
 
         switch (escolhaAlvo) {
-            case 1:
-                alvo = guerreiro;
-                break;
-            case 2:
-                alvo = arqueiro;
-                break;
-            case 3:
-                alvo = mago;
-                break;
+            case 1: 
+            	alvo = guerreiro; 
+            	break;
+            case 2: 
+            	alvo = arqueiro; 
+            	break;
+            case 3: 
+            	alvo = mago; 
+            	break;
             default:
                 System.out.println("Opção inválida!");
                 sc.close();
@@ -62,9 +62,27 @@ public class Main {
         }
 
         System.out.println("\n=== AÇÃO ===");
-        jogador.atacarOutro(alvo);
+        System.out.println("1 - Atacar");
+        System.out.println("2 - Defender");
+        System.out.println("3 - Habilidade Especial");
 
-        System.out.println("\n=== STATUS DOS PERSONAGENS ===");
+        int acao = sc.nextInt();
+
+        switch (acao) {
+            case 1:
+                jogador.atacar(alvo);
+                break;
+            case 2:
+                jogador.defender();
+                break;
+            case 3:
+                jogador.usarHabilidadesEspeciais(alvo);
+                break;
+            default:
+                System.out.println("Ação inválida!");
+        }
+
+        System.out.println("\n=== STATUS FINAL ===");
         guerreiro.exibirStatus();
         System.out.println();
         arqueiro.exibirStatus();

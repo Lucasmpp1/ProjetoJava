@@ -6,6 +6,7 @@ public abstract class Personagem implements Acoes {
     protected int vida;
     protected int ataque;
     protected int defesa;
+    protected boolean defendendo = false;
 
     public Personagem(String nome, int vida, int ataque, int defesa) {
         this.nome = nome;
@@ -27,11 +28,18 @@ public abstract class Personagem implements Acoes {
         }
     }
 
+    
     public void receberDano(int dano) {
         int danoFinal = dano - (defesa / 2);
 
         if (danoFinal <= 0) {
             danoFinal = 1;
+        }
+
+        if (defendendo) {
+            danoFinal /= 2;
+            defendendo = false;
+            System.out.println(nome + " reduziu o dano ao se defender!");
         }
 
         vida -= danoFinal;
@@ -46,14 +54,6 @@ public abstract class Personagem implements Acoes {
     public boolean estaVivo() {
         return vida > 0;
     }
-
-    public void atacarOutro(Personagem alvo) {
-        if (!alvo.estaVivo()) {
-            System.out.println(alvo.nome + " já está derrotado!");
-            return;
-        }
-
-        System.out.println("\n" + nome + " atacou " + alvo.nome + "!");
-        alvo.receberDano(this.ataque);
-    }
+    
+    
 }

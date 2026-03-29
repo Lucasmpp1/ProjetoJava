@@ -1,8 +1,7 @@
 package projetoJava;
 
 public interface Acoes {
-	void atacar();
-	void defender();
-	void usarHabilidadesEspeciais();
+    void atacar(Personagem alvo);
+    void defender();
+    void usarHabilidadesEspeciais(Personagem alvo);
 }
-
